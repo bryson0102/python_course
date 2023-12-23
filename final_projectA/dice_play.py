@@ -2,12 +2,15 @@ import time
 import dice_set as ds
 
 
-def tim(start_time):
-    current_time = time.time()
-    elap = current_time - start_time
-    if 30-int(elap) <= 0:
-        print('時間到!')
-    return elap <= 30
+def tim(count, start_time):
+    if not count:
+        return True
+    elif count:
+        current_time = time.time()
+        elap = current_time - start_time
+        if 30-int(elap) <= 0:
+            print('時間到!')
+        return elap <= 30
 
 
 # 判斷位置是否重疊
