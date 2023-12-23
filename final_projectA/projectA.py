@@ -22,8 +22,9 @@ point = +1
 correct = 0
 wrong = -1
 start_time = time.time()
+count = 0
 
-while dp.tim(start_time):
+while dp.tim(count, start_time):
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -35,6 +36,7 @@ while dp.tim(start_time):
                 dice_test = []
                 dice_num = random.randint(2, 6)
                 if point == 1:
+                    count = 1
                     start_time = time.time()
                 # running = dp.tim(start_time)
 
